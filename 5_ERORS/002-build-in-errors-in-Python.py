@@ -26,15 +26,15 @@ class User # leak ':' -> SyntaxError
 		self.password=password
 #7. IndextationError
 def add_two(x,y):
-	pass
+pass
 
 #8. TabError -> spaces or tab
 
 #9.TypeError
-print(5+'hi') # TypeError: int + str
+print(5+'hi') # TypeError: int + str( Type of the data )
 
 #10. ValueError: 
-int('20.5') #-> number not stringte
+int('20.5') #-> number not string
 # note : Normally only built in function will raise a Value Error 
 #11. ImportError: 
 #12. DeprecationWarning : Something wrong happened -> Program will crash -> Deprecate: No longer bestway of doing something

@@ -1,0 +1,39 @@
+004 Raising errors in Python
+1.	Update the function below by adding code to check the input n.
+	2.	Condition:
+	◦	n should be a non-negative integer.
+	◦	If n is negative, raise a ValueError with an appropriate error message informing the user of the issue.
+	3.	For simplicity, assume the input is always an integer.
+python
+Copy code
+def count_from_zero_to_n(n):
+    # Add your input validation code here
+    for x in range(0, n+1):
+        print(x)
+Let me know how you got on!
+
+007 Solution raising our own custom errors
+	1.	Define a custom exception class named UncountableError with the following specifications:
+	◦	It should inherit from ValueError.
+	◦	The constructor should take a single argument, wrong_value.
+	◦	The error message should follow this format: 'Invalid value for n, WRONG_VALUE. n must be greater than 0.' (Replace WRONG_VALUE with the value provided in the argument.)
+	2.	Do not modify the count_from_zero_to_n() function. 
+	3.	Test your UncountableError class by expecting it to behave as follows in the function: 
+def count_from_zero_to_n(n):
+    if n < 1:
+        raise UncountableError(n)
+    for x in range(0, n + 1):
+        print(x)
+
+
+011 Solution try-except-finally
+
+Create a function named interact() that behaves as follows:
+	•	Continuously prompt the user to input an integer.
+	•	If the input is not an integer, catch the exception and display the message: "Please input integers only."
+	•	If the input is an integer, check whether it is even or odd, and display the result in this format: "<number> is even." or "<number> is odd."
+Regardless of whether the input was valid or not, ask the user: "Do you want to play again? (y/N):"
+	•	If the user inputs anything other than 'y', print "Goodbye." and exit the program.
+Use a while loop, try-except for error handling, and finally to handle the "play again" logic.
+
+

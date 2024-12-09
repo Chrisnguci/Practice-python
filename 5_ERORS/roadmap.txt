@@ -1,0 +1,20 @@
+		Code samples for this section   00:13 
+		 Intro to errors in Python    13:13 
+		 Built in errors in Python    17:58 
+		 Errors in Python    3 câu hỏi 
+		 Raising errors in Python    10:58 
+		 Exercise: raising an error (Python 3.10)   1 câu hỏi 
+		 Solution: raising an error    00:27 
+		 Creating our own errors in Python    13:42 
+		 Exercise: raising our own custom errors (Python 3.10)   1 câu hỏi 
+		 Solution: raising our own custom errors    00:33 
+		 Dealing with Python errors    09:00 
+		 Error handling in Python    3 câu hỏi 
+		 The on success block and re-raising exceptions    11:21 
+		 Some error problems    6 câu hỏi 
+		 Handling those pesky user errors!    11:18 
+		 Exercise: try-except-finally (Python 3.10)   1 câu hỏi 
+		 Solution: try-except-finally    00:32 
+		 Debugging with Pycharm    16:37 
+		 Advanced error handling in Python    4 câu hỏi 
+		 Further reading   00:28 
