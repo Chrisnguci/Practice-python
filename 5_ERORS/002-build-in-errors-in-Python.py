@@ -3,7 +3,7 @@
 #KeyError
 #NameError
 #AttributError -> Fairly related 
-#NotImplementedError
+#NotImplementedError 
 #RuntimeError
 #SytaxError
 #IndextationError
@@ -14,7 +14,7 @@
 #DeprecationWarning 
 
 #1.IndexError -> Access the index did not exist or incorrect
-#2. Keyerror -> 
+#2. Keyerror -> the key does not exist in a dictionary
 #3. NameError -> Variable is not defined
 #4. AttributError: Dealing with object -> Object doens't have this attribute
 #5. NotImplementedError -> Point that we haven't do with this
