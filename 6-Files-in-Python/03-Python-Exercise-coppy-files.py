@@ -23,12 +23,15 @@ friends_set = set(friends)
 with open(people_file,'r') as file:
 	nearby_people= file.readlines()
 file.close()
-nearby_people = [ friend.strip() for friend in nearby_people]
+
+# List comprehension 
+nearby_people = [friend.strip() for friend in nearby_people]
 people_nearby_set = set(nearby_people) 
+print(people_nearby_set)
 # using intersection
 nearby_friends_set = friends_set.intersection(people_nearby_set)
 
-with open(nearby_file,'a') as file : 
+with open(nearby_file,'w') as file : 
 	for friend in nearby_friends_set:
 			file.write(f"{friend}\n")
 
