@@ -5,7 +5,8 @@
 #hint: readlines() -> if user in the people -> put them into nearby_friends
 
 import os
-friends = []
+nearby_file = os.path.join(os.getcwd(),'nearby_friends.txt')
+people_file= os.path.join(os.getcwd(),'people.txt')
 
 user_input = input("Enter 3 Fiends: ")
 try:
@@ -16,16 +17,20 @@ else:
 	if len(friends) !=3:
 		raise ValueError("Plese Enter 3 Friends")
 
-nearby_file = os.path.join(os.getcwd(),'nearby_friends.txt')
-people_file= os.path.join(os.getcwd(),'people.txt')
-with open(people_file,'r') as file:
-	current_friends= file.readlines()
-file.close()
-current_friends = [ friend.strip() for friend in current_friends]
 
-for friend in friends:
-	if friend in current_friends:
-		print(friend)
-	else:
-		print(f"{friend} is not exists")
+
+friends_set = set(friends)
+with open(people_file,'r') as file:
+	nearby_people= file.readlines()
+file.close()
+nearby_people = [ friend.strip() for friend in nearby_people]
+people_nearby_set = set(nearby_people) 
+# using intersection
+nearby_friends_set = friends_set.intersection(people_nearby_set)
+
+with open(nearby_file,'a') as file : 
+	for friend in nearby_friends_set:
+			file.write(f"{friend}\n")
+
+file.close()
 
