@@ -1,0 +1,13 @@
+{
+
+	"Friends":[
+		{
+			"name": "Chris",
+			"degree": "Ecommerce"
+		},
+		{
+			"name": "Bob",
+			"degree": "Computer Sience"
+		}
+	]
+}
