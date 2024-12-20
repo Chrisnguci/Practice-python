@@ -19,25 +19,44 @@ Create a dictionary with the following structure: file named json_file.txt in JS
 
 
 import json
-with open('csv_file.txt','r') as file:
-    writer = file.read()
-    data_rows = writer.split('\n')
-    header = data_rows[0]
-    main_rows =[ row for row in data_rows[1:] ] 
-file.close()
+# with open('csv_file.txt','r') as file:
+#     writer = file.read()
+#     data_rows = writer.split('\n')
+#     header = data_rows[0]
+#     main_rows =[ row for row in data_rows[1:] ] 
+# file.close()
 
-headers=header.split(',')
+# headers=header.split(',')
 
-json_list=[]
+# json_list=[]
 
 
-for row in main_rows:
-    dict_data = {}
-    for i in range(0,len(headers)):
+# for row in main_rows:
+#     dict_data = {}
+#     for i in range(0,len(headers)):
 
-        dict_data[headers[i]]=main_rows[i]
-        json_list.append(dict_data)
+#         dict_data[headers[i]]=main_rows[i]
+#         json_list.append(dict_data)
 
-json_file=open('json_file.json','w') 
-json.dump(json_list,json_file)
+# json_file=open('json_file.json','w') 
+# json.dump(json_list,json_file)
 
+
+
+json_list = []      # store the converted json data for each line
+csv_file = open('csv_file.txt', 'r')
+
+for line in csv_file.readlines():
+    club, city, country = line.strip().split(',')   # first get rid of the \n and then split with ','
+    data = {
+        'club': club,
+        'city': city,
+        'country': country
+    }
+    json_list.append(data)
+
+csv_file.close()
+
+json_file = open('json_file.txt', 'w')
+json.dump(json_list, json_file)     # write json data to a file
+json_file.close()
